@@ -1,8 +1,11 @@
-//require
 const express = require('express')
 const dotenv = require('dotenv')
 const cors = require('cors')
 const mongoose = require('mongoose')
+
+//routes
+const authRoute = require('./routes/auth.js')
+const usersRoute = require('./routes/users.js')
 
 const app = express()
 dotenv.config()
@@ -25,9 +28,8 @@ mongoose.connection.on("disconnected", () => {
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (request, response) => {
-    response.send('Hello from my server')
-})
+app.use('/api/auth', authRoute);
+app.use('/api/users', usersRoute);
 
 //to handle errors
 app.use((err, req, res, next) => {
