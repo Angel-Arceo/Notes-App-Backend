@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 //routes
 const authRoute = require('./routes/auth.js')
 const usersRoute = require('./routes/users.js')
+const notesRoute = require('./routes/notes.js')
 
 const app = express()
 dotenv.config()
@@ -30,6 +31,7 @@ app.use(express.json());
 
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
+app.use('/api/notes', notesRoute)
 
 //to handle errors
 app.use((err, req, res, next) => {
