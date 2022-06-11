@@ -1,16 +1,16 @@
-const jwt = request('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 
-const verifyToken = (request, response, next) => {
+const verifyToken = async (request, response, next) => {
     const token = request.headers['x-access-token'];
 
-    if(!token) return response.status(401).json({auth: false, message: 'No token provided'})
+    if(!token) return response.status(401).json( {auth: false, message: 'No token provided'} )
 
-    const decoded = jwt.verify(token, process.env.SECRET_KEY)
+    const decoded = await jwt.verify(token, process.env.SECRET_KEY)
 
     request.userId = decoded
-    next()
+    next();
 }
 
 module.exports = verifyToken;

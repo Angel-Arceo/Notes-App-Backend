@@ -2,7 +2,7 @@ POST http://localhost:3001/api/auth/register/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "elPutoFeo",
+    "username": "Jorge Ocampos",
     "password": "MYCODE1812",
     "notes": [
         {
@@ -19,16 +19,16 @@ POST http://localhost:3001/api/auth/login/ HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "elPutoFeo",
+    "username": "Jorge Ocampos",
     "password": "MYCODE1812"
 }
 
 ###
-GET http://localhost:3001/api/users/getUser/629d4f3fa2355ad80f7719c7 HTTP/1.1
+GET http://localhost:3001/api/users/getUser/62a28927c39a04db408fb095 HTTP/1.1
 
 ###
 
 GET http://localhost:3001/api/users/getUsers/ HTTP/1.1
 ###
 
-DELETE http://localhost:3001/api/users/deleteUser/629d6d4fda0444dcf5525358 HTTP/1.1
+DELETE http://localhost:3001/api/users/deleteUser/629fd0681508e10cc2eeb80c HTTP/1.1

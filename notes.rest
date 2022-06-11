@@ -1,0 +1,27 @@
+POST http://localhost:3001/api/notes/newNote HTTP/1.1
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTI4OTI3YzM5YTA0ZGI0MDhmYjA5NSIsImlhdCI6MTY1NDk2OTk4OSwiZXhwIjoxNjU1MDU2Mzg5fQ.8Xy9Q_MO4hJ8_ta690kAq_XojAPq0RBPK65xuHNPahU
+
+{
+    "title": "Hey man!",
+    "body": "Hibsndkj",
+    "Date": "2022-06-05"
+}
+
+###
+
+PUT http://localhost:3001/api/notes/editNote/62a28927c39a04db408fb096 HTTP/1.1
+Content-Type: application/json
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTI4OTI3YzM5YTA0ZGI0MDhmYjA5NSIsImlhdCI6MTY1NDk2OTk4OSwiZXhwIjoxNjU1MDU2Mzg5fQ.8Xy9Q_MO4hJ8_ta690kAq_XojAPq0RBPK65xuHNPahU
+
+{
+    "title": "Este ta' editado",
+    "body": "Me chupa un huevo",
+    "Date": "2022-18-05"
+}
+
+
+###
+
+DELETE http://localhost:3001/api/notes/deleteNote/62a28953c39a04db408fb09a HTTP/1.1
+x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYTI4OTI3YzM5YTA0ZGI0MDhmYjA5NSIsImlhdCI6MTY1NDk2OTk4OSwiZXhwIjoxNjU1MDU2Mzg5fQ.8Xy9Q_MO4hJ8_ta690kAq_XojAPq0RBPK65xuHNPahU
