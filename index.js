@@ -45,7 +45,9 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(process.env.PORT, () => {
+const PORT = process.env.PORT || 3001
+
+app.listen(PORT, () => {
     connect()
     console.log('Connected to backend :D')
 })
